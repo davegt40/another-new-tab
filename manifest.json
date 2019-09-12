@@ -1,0 +1,13 @@
+{
+
+    "manifest_version": 2,
+    "name": "Another Tab App",
+    "version": "0.1.0",
+  
+    "description": "A custom new tab for all your browsing needs.",
+
+    "chrome_url_overrides" : {
+        "newtab": "app.html"
+      }
+  
+  }
