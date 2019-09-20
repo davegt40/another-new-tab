@@ -1,8 +1,0 @@
-.l-content {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.l-content__component {
-  flex: 1 1 auto;
-}
