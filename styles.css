@@ -1,8 +1,8 @@
-.tab-content {
+.l-content {
   display: flex;
   flex-wrap: wrap;
 }
 
-.tab-content__component {
+.l-content__component {
   flex: 1 1 auto;
 }
