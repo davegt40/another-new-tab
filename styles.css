@@ -1,0 +1,8 @@
+.tab-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab-content__component {
+  flex: 1 1 auto;
+}
