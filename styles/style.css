@@ -5,6 +5,11 @@
   --outline-color-light: #efefef;
   --hal-color: #E92B0B;
 }
+
+body {
+  background-color: var(--background-color-dark);
+}
+
 @font-face {
   font-family: 'halhal';
   src: url('/styles/fonts/hal-webfont.woff') format('woff'),
@@ -13,8 +18,19 @@
   font-style: normal;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.l-header__image {
+  width: 200px;
+}
+
 .l-heading {
   font-family: halhal, Arial, Helvetica, sans-serif;
+  color: var(--outline-color-dark);
 }
 
 .l-content {
