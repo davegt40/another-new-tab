@@ -1,3 +1,10 @@
+:root {
+  --background-color-dark: #333138;
+  --background-color-light: #fffffa;
+  --outline-color-dark: #000103;
+  --outline-color-light: #efefef;
+  --hal-color: #E92B0B;
+}
 @font-face {
   font-family: 'halhal';
   src: url('/styles/fonts/hal-webfont.woff') format('woff'),
