@@ -34,9 +34,15 @@ function createPostItems(data) {
 
   if (postsList) {
     for (let item of data) {
-      let childElement = document.createElement('li');
-      let appendChildElement = postsList.appendChild(childElement);
-      appendChildElement.innerHTML = item.data.title;
+      let listItem = document.createElement('li');
+
+      let anchorItem = document.createElement('a');
+      anchorItem.setAttribute('href', item.data.url);
+      anchorItem.setAttribute('alt', item.data.title);
+      anchorItem.innerText = item.data.title;
+
+      listItem.appendChild(anchorItem);
+      postsList.appendChild(listItem);
     }
   } else {
     console.log('No data');

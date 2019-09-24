@@ -41,3 +41,13 @@ header {
 .l-content__component {
   flex: 1 1 auto;
 }
+
+.c-reddit {
+  max-width: 600px;
+}
+
+.c-reddit__posts a {
+  color: var(--background-color-light);
+  text-decoration: none;
+  font-size: 18px;
+}
