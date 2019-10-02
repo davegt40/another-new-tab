@@ -66,7 +66,28 @@ header {
 }
 
 .c-reddit__posts a {
-  color: var(--background-color-light);
+  color: var(--background-color-dark);
   text-decoration: none;
   font-size: 18px;
+}
+
+.c-reddit-post {
+  border: 1px rgba(0, 0, 0, 0.40) solid;
+  -webkit-box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.85);
+  box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.85);
+  margin-bottom: 10px;
+}
+
+.c-reddit-post a {
+  display: flex;
+}
+
+.c-reddit-post__image {
+  max-width: 80px;
+  display: inline;
+  margin: 20px;
+}
+
+.c-reddit-post p {
+  display: inline;
 }
