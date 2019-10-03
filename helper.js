@@ -16,7 +16,7 @@ export function getPosts(subreddit, type) {
       console.log(json); // useful for debugging during development
 
       // TODO: add empty state handling
-      createPostItems(json.data.children);
+      createPostItems(json.data.children, subreddit);
     })
     .catch(function (error) {
       console.log('There was an issue fetching the data. ' + response.error);
@@ -29,12 +29,12 @@ export function getPosts(subreddit, type) {
  * @param {object} data 
  * @return {undefined}
  */
-function createPostItems(data) {
-  const postsList = document.querySelector('.c-reddit__posts');
+function createPostItems(data, subreddit) {
+  const postsList = document.querySelector(`#c-reddit-${subreddit}`);
 
   if (postsList) {
     for (let item of data) {
-      postsList.appendChild(createPostElement(item));
+      postsList.appendChild(createPostElement(item, subreddit));
     }
   } else {
     console.log('No data');
@@ -47,7 +47,7 @@ function createPostItems(data) {
  * @param {object} item
  * @return {node} html node representing a reddit post
  */
-function createPostElement(item) {
+function createPostElement(item, subreddit) {
   let container = document.createElement('div');
   container.setAttribute('class', 'c-reddit-post');
 
@@ -58,7 +58,8 @@ function createPostElement(item) {
   const image = document.createElement('img');
 
   // thumbnail image may not always be available
-  let imageUrl = (item.data.thumbnail === 'self') ? './images/code-solid.svg' : item.data.thumbnail;
+  let thumbnail = item.data.thumbnail;
+  let imageUrl = (thumbnail === 'self' || thumbnail === '') ? `./images/default-icon-${subreddit}.svg` : thumbnail;
   image.setAttribute('src', imageUrl);
   image.setAttribute('class', 'c-reddit-post__image')
 

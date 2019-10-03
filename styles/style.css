@@ -80,10 +80,11 @@ header {
 
 .c-reddit-post a {
   display: flex;
+  color: var(--outline-color-dark);
 }
 
 .c-reddit-post__image {
-  max-width: 80px;
+  max-width: 40px;
   display: inline;
   margin: 20px;
 }

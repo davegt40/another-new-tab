@@ -4,4 +4,6 @@ import * as helper from "./helper.js";
 let audio = document.querySelector('#good-morning-dave').play();
 
 // load reddit posts
-helper.getPosts('webdev', 'new');
+helper.getPosts('webdev', 'hot');
+helper.getPosts('salesforce', 'hot');
+helper.getPosts('fantasyfootball', 'hot');
